@@ -1,0 +1,6 @@
+.idea/
+venv/
+.github/
+.editorconfig
+.flake8
+.gitignore
