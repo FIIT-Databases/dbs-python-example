@@ -1,4 +1,4 @@
-from pydantic import BaseSettings, AnyHttpUrl
+from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):

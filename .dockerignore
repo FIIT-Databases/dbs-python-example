@@ -4,3 +4,4 @@ venv/
 .editorconfig
 .flake8
 .gitignore
+.env
