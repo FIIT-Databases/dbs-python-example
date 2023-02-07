@@ -53,18 +53,41 @@ for more information.
 
 ### Docker
 
-You can build your Docker image with name dbs-example simply by calling:
+You can build your Docker image with name `dbs-python-example` (you have to use same name as the name of the
+repository) simply by calling:
 
 ```shell
-docker build -t dbs-example .
+docker build -t dbs-python-example .
 ```
 
-After successfully build, you can run it as a container named `dbs-example-container` using command bellow.
+After successfully build, you can run it as a container named `dbs-python-example-container` using command bellow.
 This example also pass the `NAME` environment variable with value `Dexter` and redirect ports, so you can access the
 HTTP server inside the container.
 
 ```shell
-docker run -p 127.0.0.1:8000:8000 --env NAME=Dexter --name dbs-example-container dbs-example
+docker run -p 127.0.0.1:8000:8000 --env NAME=Dexter --name dbs-python-example-container dbs-python-example
+```
+
+If the waiting time for a GitHub actions is too long, you can publish yours local build image
+using [docker push](https://docs.docker.com/engine/reference/commandline/push/).
+
+Firstly you have to tag your local image according to the scheme bellow (replace curly braces):
+`ghcr.io/FIIT-Databases/{your-repository-name}:{tag-name}`.
+
+Valid command for this repository and tag name `latest` looks like this:
+
+```shell
+docker tag dbs-python-example ghcr.io/fiit-databases/dbs-python-example:latest
+```
+
+You can use tag names for different versions of your image (for example to identify assignment version). The CI/CD
+pipeline in this repository creates a `:master` tag after each git push to the `master` branch.
+
+You can publish newly tagged image to the remote using
+[docker push](https://docs.docker.com/engine/reference/commandline/push/) command.
+
+```shell
+docker push ghcr.io/fiit-databases/dbs-python-example:latest
 ```
 
 ---
