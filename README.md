@@ -43,7 +43,7 @@ Docker image.
 ### From source
 
 These are instructions for Linux/macOS operating systems. Windows may differ depending on your system configuration.
-Keep in mind that application requires to have present variables from the `config.py`. Check the Pydantic docs provided
+Keep in mind that application requires presence of variables from the `config.py`. Check the Pydantic docs provided
 for more information.
 
 1. Create python virtual environment: `python -m venv venv`
@@ -60,7 +60,7 @@ repository) simply by calling:
 docker build -t dbs-python-example .
 ```
 
-After successfully build, you can run it as a container named `dbs-python-example-container` using command bellow.
+After a successful build, you can run it as a container named `dbs-python-example-container` using command bellow.
 This example also pass the `NAME` environment variable with value `Dexter` and redirect ports, so you can access the
 HTTP server inside the container.
 
