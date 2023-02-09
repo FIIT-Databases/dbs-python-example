@@ -81,7 +81,13 @@ docker tag dbs-python-example ghcr.io/fiit-databases/dbs-python-example:latest
 ```
 
 You can use tag names for different versions of your image (for example to identify assignment version). The CI/CD
-pipeline in this repository creates a `:master` tag after each git push to the `master` branch.
+pipeline creates Docker image for:
+
+- each commit to `main` branch (will produce Docker image with `:main` tag),
+- each commit to `master` branch (will produce Docker image with `:main` tag),
+- each tag following sematic versioning (will produce Docker image with `:x.x.x` tag where `x.x.x` is version)
+
+For more information check the **Publishing** section.
 
 You can publish newly tagged image to the remote using
 [docker push](https://docs.docker.com/engine/reference/commandline/push/) command.
@@ -89,6 +95,14 @@ You can publish newly tagged image to the remote using
 ```shell
 docker push ghcr.io/fiit-databases/dbs-python-example:latest
 ```
+
+## Publishing
+
+Each assignment have to be published using via GitHub Releases. The CI/CD pipeline is configured for the [Semantic
+versioning](https://semver.org/) scheme (the Docker is created for each git tag with sematic version eg. `1.0.0`).
+
+After you submit your assignment, you can't replace a container in the registry (Docker images created after
+submission deadline will be rejected).
 
 ---
 ![](docs/fiit.png)
