@@ -101,8 +101,12 @@ docker push ghcr.io/fiit-databases/dbs-python-example:latest
 Each assignment have to be published using via GitHub Releases. The CI/CD pipeline is configured for the [Semantic
 versioning](https://semver.org/) scheme (the Docker is created for each git tag with sematic version eg. `1.0.0`).
 
+![](docs/publish.gif)
+
 After you submit your assignment, you can't replace a container in the registry (Docker images created after
 submission deadline will be rejected).
+
+![](docs/releases.gif)
 
 ---
 ![](docs/fiit.png)
