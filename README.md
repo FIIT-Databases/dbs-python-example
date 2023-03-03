@@ -69,7 +69,8 @@ docker run -p 127.0.0.1:8000:8000 --env NAME=Dexter --name dbs-python-example-co
 ```
 
 If the waiting time for a GitHub actions is too long, you can publish yours local build image
-using [docker push](https://docs.docker.com/engine/reference/commandline/push/).
+using [docker push](https://docs.docker.com/engine/reference/commandline/push/). Keep in mind the tester accepts only
+images published inside the FIIT-Databases GitHub organisation.
 
 Firstly you have to tag your local image according to the scheme bellow (replace curly braces):
 `ghcr.io/FIIT-Databases/{your-repository-name}:{tag-name}`.

@@ -1,7 +1,9 @@
 FROM alpine:3.17 as builder
 
-RUN apk add --no-cache python3 py3-pip libpq postgresql-client curl
+RUN apk add --no-cache python3 py3-pip libpq postgresql-client curl tzdata alpine-conf
 RUN adduser -D dbs
+
+RUN setup-timezone -z Europe/Bratislava
 
 USER dbs
 
