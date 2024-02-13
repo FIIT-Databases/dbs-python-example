@@ -5,7 +5,7 @@ containerized in the Docker environment. You don't have to stick with the FastAP
 is just a simple example of Docker build process with environments variables (which you have to use because of the
 database configuration).
 
-If you have any questions feel free to create a issue or offer a pull request.
+If you have any questions feel free to create an issue or offer a pull request.
 
 ## Content of the repository
 
